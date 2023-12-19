@@ -29,18 +29,13 @@ public class Cliente {
 
     public static void cadastrarVeiculo() {
           // Obter dados do veículo
-        String marca = JOptionPane.showInputDialog("Informe a marca do veículo");
-        String cor = JOptionPane.showInputDialog("Informe a cor do veículo");
-        String modelo = JOptionPane.showInputDialog("Informe o modelo do veículo");
-        String stranoModelo = JOptionPane.showInputDialog("Informe o ano do modelo");
-        String stranoFabricacao = JOptionPane.showInputDialog("Informe o ano de fabricação do veículo");
-        String strcombustivel = JOptionPane.showInputDialog("Informe o nível de combustível do veículo, em porcentagem");
-        String strquilometragem = JOptionPane.showInputDialog("Informe o valor da quilometragem atual");
-
-        int anoModelo = Integer.parseInt(stranoModelo);  // String --> int
-        int anoFabricacao = Integer.parseInt(stranoFabricacao);
-        int combustivel = Integer.parseInt(strcombustivel);
-        float quilometragem = Float.parseFloat(strquilometragem);  // String --> float
+        String marca = JOptionPane.showInputDialog("Informe a marca do veículo: ");
+        String cor = JOptionPane.showInputDialog("Informe a cor do veículo: ");
+        String modelo = JOptionPane.showInputDialog("Informe o modelo do veículo: ");
+        int anoModelo = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano do modelo: ")); // String --> int
+        int anoFabricacao = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do veículo: "));
+        int combustivel = Integer.parseInt(JOptionPane.showInputDialog("Informe o nível de combustível do veículo, em porcentagem (inclua somente o número): "));
+        float quilometragem = Float.parseFloat(JOptionPane.showInputDialog("Informe o valor da quilometragem atual: ")); // String --> float
 
         Veiculo tempVeiculo = new Veiculo(marca, cor, modelo, anoModelo, anoFabricacao, combustivel, quilometragem);  // Referencia temporaria para segurar os dados do veiculo
 

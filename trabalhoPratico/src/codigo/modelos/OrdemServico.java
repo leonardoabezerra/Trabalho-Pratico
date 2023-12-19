@@ -63,11 +63,9 @@ public class OrdemServico {
         do {
 
               // Obter dados genéricos de Item
-            String descricao = JOptionPane.showInputDialog("Insira a descrição do item");
-            String codigo = JOptionPane.showInputDialog("Informe o código do item");
-            String strpreco = JOptionPane.showInputDialog("Informe o preço do item");
-
-            float preco = Float.parseFloat(strpreco);  // String --> float
+            String descricao = JOptionPane.showInputDialog("Insira a descrição do item: ");
+            String codigo = JOptionPane.showInputDialog("Informe o código do item: ");
+            float preco = Float.parseFloat(JOptionPane.showInputDialog("Informe o preço do item: ")); // String --> float
 
             valorTotal += preco;  // Somar o preço ao valor total da ordem de serviço
 
@@ -90,8 +88,7 @@ public class OrdemServico {
                 tempItem = new Peca(descricao, codigo, preco, marca, unidade);  // tempItem está referenciando uma peça
 
             } else if (tipoItem == SERVICO) {
-                String strhoras = JOptionPane.showInputDialog("Informe o tempo, em horas, necessário para realizar o serviço");
-                float horas = Float.parseFloat(strhoras);  // String --> float
+                float horas = Float.parseFloat(JOptionPane.showInputDialog("Informe o tempo, em horas, necessário para realizar o serviço: ")); // String --> float
                 tempItem = new Servico(descricao, codigo, preco, horas);  // tempItem está referenciando um serviço
 
             } else {
