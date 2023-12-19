@@ -1,5 +1,6 @@
 # Trabalho-Pratico
-Trabalho da disciplina Orientação a Objetos - fga0158
+Trabalho da disciplina Orientação a Objetos - fga0158<br />
+Professor: André Lanna
 
 # Integrantes:
 Leonardo Alves Bezerra - 231011604<br />
