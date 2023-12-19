@@ -13,7 +13,7 @@ public class Peca extends Item{
         this.unidade = unidade;
     }
 
-      // Relatório para organizar informações para mostrar ao usuário
+      // Relatório para organizar informações para mostrar ao usuário (Implementação do metodo da superclasse)
     public String relatorio() {
         String resposta = super.relatorio();  // Herda informações de Item
         resposta += "MARCA: " + marca + "\n";
