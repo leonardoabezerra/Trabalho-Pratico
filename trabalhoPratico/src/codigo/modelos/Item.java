@@ -2,7 +2,7 @@ package codigo.modelos;
 
   // Classe de Itens que somam ao preço total da ordem de serviço
 
-public class Item {
+abstract public class Item {
       // Declaração dos atributos
     public String descricao, codigo;
     public float preco;
@@ -15,15 +15,7 @@ public class Item {
     }
 
       // Relatório para organizar informações do item para mostrar ao usuário
-    public String relatorio() {
-        String resposta = "";
-        resposta += "**** DADOS DO ITEM **** \n";
-        resposta += "DESCRIÇÃO: " + descricao + "\n";
-        resposta += "CÓDIGO: " + codigo + "\n";
-        resposta += "PREÇO: R$ " + preco + "\n";
-
-        return resposta;
-    }
+    public abstract String relatorio();
 
       // Metodos de get/set
     public String getDescricao() {
