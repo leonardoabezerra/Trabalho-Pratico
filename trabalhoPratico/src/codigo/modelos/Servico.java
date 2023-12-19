@@ -11,7 +11,7 @@ public class Servico extends Item {
         this.horas = horas;
     }
 
-      // Relatório para organizar informações para mostrar para o usuário
+      // Relatório para organizar informações para mostrar para o usuário (Implementação de metodo da superclasse)
     public String relatorio() {
         String resposta = super.relatorio();  // Herda informações de Item
         resposta += "TEMPO NECESSÁRIO: " + horas +
