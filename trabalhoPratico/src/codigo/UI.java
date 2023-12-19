@@ -42,11 +42,11 @@ public class UI {
         if (verDetalhes == JOptionPane.YES_OPTION) {
 
               // Mostrar na tela os detalhes dos cadastros realizados
-            for (int i = 0; i < cliente.length; i++) {
+            for (int i = 0; i < Cadastro.cliente.length; i++) {
                 JOptionPane.showMessageDialog(null, "DADOS DA ORDEM DE SERVIÇO #" + (i+1));
-                JOptionPane.showMessageDialog(null, cliente[i].relatorio());  // Mostrar informações do cliente
+                JOptionPane.showMessageDialog(null, Cadastro.cliente[i].relatorio());  // Mostrar informações do cliente
                 JOptionPane.showMessageDialog(null, Cliente.getVeiculo(i));  // Mostrar info do veiculo
-                JOptionPane.showMessageDialog(null, ordemServico[i].relatorio());  // Mostrar info da OS
+                JOptionPane.showMessageDialog(null, Cadastro.ordemServico[i].relatorio());  // Mostrar info da OS
 
             }
 
@@ -57,3 +57,4 @@ public class UI {
 
         }
     }
+}
