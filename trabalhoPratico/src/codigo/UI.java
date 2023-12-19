@@ -16,10 +16,10 @@ public class UI {
             String cpf = JOptionPane.showInputDialog("Informe o CPF do cliente: ");
 
             Cliente tempCliente = new Cliente(nome, contato, cpf);  // Referencia temporária para referenciar um cliente
-            cadastrarCliente(tempCliente);
+            Cadastrp.cadastrarCliente(tempCliente);
 
               // Cadastrar veículo do cliente
-            Cadastro.Cliente.cadastrarVeiculo();
+            Cliente.cadastrarVeiculo();
 
               // Obter dados sobre a Ordem de Serviço
             String mecanico = JOptionPane.showInputDialog("Informe o mecânico responsável pela ordem de serviço: ");
