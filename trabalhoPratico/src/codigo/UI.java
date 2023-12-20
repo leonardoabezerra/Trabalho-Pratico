@@ -7,10 +7,9 @@ import codigo.modelos.OrdemServico;
 public class UI {
     public static void main(String[] args) {
         String[] opcoes = {"Adicionar Ordem de serviço", "Listar Dados","Finalizar"};
-
+        int aux = 0;
         while (true) {
             boolean sair = false;
-            int aux = 0;
             int escolha = JOptionPane.showOptionDialog(null, "Selecione a tarefa desejada: ", "Bem vindo!",
             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoes, opcoes[0]);
 
