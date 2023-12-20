@@ -6,9 +6,11 @@ import codigo.modelos.OrdemServico;
 
 public class UI {
     public static void main(String[] args) {
-        String[] opcoes = {"Adicionar Ordem de serviço", "Listar Dados","Concluir Serviço","Finalizar"};
+        String[] opcoes = {"Adicionar Ordem de serviço", "Listar Dados","Finalizar"};
+
         while (true) {
             boolean sair = false;
+            int aux = 0;
             int escolha = JOptionPane.showOptionDialog(null, "Selecione a tarefa desejada: ", "Bem vindo!",
             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoes, opcoes[0]);
 
@@ -58,8 +60,9 @@ public class UI {
                         Cadastro.cadastrarOrdemServico(tempOrdemServico);
 
                         // Iniciar cadastro dos itens
-                        OrdemServico.cadastrarItens();
+                        Cadastro.ordemServico[aux++].cadastrarItens();
                     }
+
                     break;
 
                 case 1:
@@ -84,14 +87,8 @@ public class UI {
                 
                     break;
                 case 2:
-                    // Fechar conta
-
-                    // Opção 3
-                    break;
-                case 3:
                     // Sair
-
-                    // Opção 4
+                    // Opção 3
                     sair = true;
                     break;
                 default:
