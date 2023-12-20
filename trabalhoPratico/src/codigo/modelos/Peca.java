@@ -2,7 +2,7 @@ package codigo.modelos;
 
   // Peças a serem substituidas
 
-public class Peca extends Item{
+public class Peca extends Item {
       // Declaração dos atributos únicos
     private String marca, unidade;
 
@@ -15,9 +15,10 @@ public class Peca extends Item{
 
       // Relatório para organizar informações para mostrar ao usuário (Implementação do metodo da superclasse)
     public String relatorio() {
-        String resposta = relatorio();  // Herda informações de Item
+        String resposta = "";  // Herda informações de Item
+        resposta += "Descrição: " + descricao + "\n";
         resposta += "MARCA: " + marca + "\n";
-        resposta += "UNIDADE: " + unidade + 
+        resposta += "UNIDADE: " + unidade +
                     "\nTIPO: PEÇA\n";
 
         return resposta;

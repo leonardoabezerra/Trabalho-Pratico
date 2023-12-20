@@ -149,6 +149,7 @@ public class UI {
                     // Opção 3
                     sair = true;
                     break;
+
                 default:
                 //JOptionPane.showMessageDialog(null, "Um erro inesperado aconteceu =(");
                     sair = true;

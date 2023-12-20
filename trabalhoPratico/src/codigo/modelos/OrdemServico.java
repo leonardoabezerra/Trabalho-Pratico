@@ -1,6 +1,8 @@
 package codigo.modelos;
 
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.List;
 
 public class OrdemServico {
       // Declaração de atributos
@@ -38,11 +40,11 @@ public class OrdemServico {
     }
 
     public static String getItem(int i) {
-        return item[i].relatorio();
+        return item.get(i).relatorio();
     }
 
       // Cadastro de Itens
-    static Item[] item = new Item[0];
+      static List<Item> item = new ArrayList<Item>();
     
     public void cadastrarItens() {
 
@@ -51,7 +53,8 @@ public class OrdemServico {
         final int SERVICO = 1;
         
         while(true){
-        Item tempItem;
+        Item tempItem = null;
+
         boolean sair = false;
         String descricao, codigo, marca, unidade;
         float preco;
@@ -89,10 +92,12 @@ public class OrdemServico {
             sair = true;
             break;
         }
-
+      
         if (sair == true) {
           break;
         }
+        qtditem++;  // Incrementar a quantidade de itens cadastrados
+        OrdemServico.item.add(tempItem);  // Adicionar o item à lista de itens
       }
     }
 }

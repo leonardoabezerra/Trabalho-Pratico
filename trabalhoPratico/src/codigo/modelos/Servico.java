@@ -13,7 +13,8 @@ public class Servico extends Item {
 
       // Relatório para organizar informações para mostrar para o usuário (Implementação de metodo da superclasse)
     public String relatorio() {
-        String resposta = relatorio();  // Herda informações de Item
+        String resposta = "";  // Herda informações de Item
+        resposta += "Descrição: " + descricao + "\n";
         resposta += "TEMPO NECESSÁRIO: " + horas +
                     "\nTIPO: SERVIÇO\n";
 
