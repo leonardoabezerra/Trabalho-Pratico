@@ -15,7 +15,7 @@ public class Peca extends Item{
 
       // Relatório para organizar informações para mostrar ao usuário (Implementação do metodo da superclasse)
     public String relatorio() {
-        String resposta = super.relatorio();  // Herda informações de Item
+        String resposta = relatorio();  // Herda informações de Item
         resposta += "MARCA: " + marca + "\n";
         resposta += "UNIDADE: " + unidade + 
                     "\nTIPO: PEÇA\n";

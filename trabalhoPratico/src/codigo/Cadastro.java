@@ -1,7 +1,5 @@
 package codigo;
 
-import javax.swing.JOptionPane;
-
 import codigo.modelos.Cliente;
 import codigo.modelos.OrdemServico;
 
