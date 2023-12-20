@@ -1,7 +1,5 @@
 package codigo.modelos;
 
-import javax.swing.JOptionPane;
-
 public class Cliente {
       // Declaração de atributos
     private String nome, contato, cpf;

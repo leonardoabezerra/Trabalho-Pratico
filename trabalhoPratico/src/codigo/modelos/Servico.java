@@ -15,6 +15,8 @@ public class Servico extends Item {
     public String relatorio() {
         String resposta = "";  // Herda informações de Item
         resposta += "Descrição: " + descricao + "\n";
+        resposta += "Código: " + codigo + "\n";
+        resposta += "Preço: " + preco + "\n";
         resposta += "TEMPO NECESSÁRIO: " + horas +
                     "\nTIPO: SERVIÇO\n";
 

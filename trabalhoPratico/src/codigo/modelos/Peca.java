@@ -17,6 +17,8 @@ public class Peca extends Item {
     public String relatorio() {
         String resposta = "";  // Herda informações de Item
         resposta += "Descrição: " + descricao + "\n";
+        resposta += "Código: " + codigo + "\n";
+        resposta += "Preço: " + preco + "\n";
         resposta += "MARCA: " + marca + "\n";
         resposta += "UNIDADE: " + unidade +
                     "\nTIPO: PEÇA\n";

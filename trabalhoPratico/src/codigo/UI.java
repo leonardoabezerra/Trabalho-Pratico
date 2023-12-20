@@ -6,7 +6,7 @@ import codigo.modelos.OrdemServico;
 
 public class UI {
     public static void main(String[] args) {
-        String[] opcoes = {"Adicionar Ordem de serviço", "Listar Dados","Finalizar"};
+        String[] opcoes = {"Adicionar Ordem de serviço", "Listar Ordens","Finalizar"};
         int aux = 0;
         
         while (true) {
@@ -59,19 +59,19 @@ public class UI {
                         JTextField combustivelField = new JTextField(10);
                         JTextField quilometrageField = new JTextField(10);
 
-                        veiculoPanel.add(new JLabel("Marca do veículo:"));
+                        veiculoPanel.add(new JLabel("Marca do veículo: "));
                         veiculoPanel.add(marcaField);
-                        veiculoPanel.add(new JLabel("Modelo:"));
+                        veiculoPanel.add(new JLabel("Modelo: "));
                         veiculoPanel.add(modeloField);
-                        veiculoPanel.add(new JLabel("Cor:"));
+                        veiculoPanel.add(new JLabel("Cor: "));
                         veiculoPanel.add(corField);
-                        veiculoPanel.add(new JLabel("Ano do modelo:"));
+                        veiculoPanel.add(new JLabel("Ano do modelo: "));
                         veiculoPanel.add(anoMField);
-                        veiculoPanel.add(new JLabel("Ano de Fabricação:"));
+                        veiculoPanel.add(new JLabel("Ano de Fabricação: "));
                         veiculoPanel.add(anoFField);
-                        veiculoPanel.add(new JLabel("Combustivel em porcentagem (%):"));
+                        veiculoPanel.add(new JLabel("Combustível em porcentagem (informe somente o valor numérico): "));
                         veiculoPanel.add(combustivelField);
-                        veiculoPanel.add(new JLabel("Quilometragem:"));
+                        veiculoPanel.add(new JLabel("Quilometragem: "));
                         veiculoPanel.add(quilometrageField);
                         
                             // Exibir o JPanel para entrada de dados do cliente
@@ -96,11 +96,11 @@ public class UI {
                         JTextField dataEField = new JTextField(10);
                         JTextField dataPField = new JTextField(10);
 
-                        OSPanel.add(new JLabel("Mecanico Responsavel:"));
+                        OSPanel.add(new JLabel("Mecânico Responsável: "));
                         OSPanel.add(mecanicoField);
-                        OSPanel.add(new JLabel("Data de Emissão:"));
+                        OSPanel.add(new JLabel("Data de Emissão: "));
                         OSPanel.add(dataEField);
-                        OSPanel.add(new JLabel("Data Prevista"));
+                        OSPanel.add(new JLabel("Data Prevista: "));
                         OSPanel.add(dataPField);
 
                         // Exibir o JPanel para entrada de dados do cliente

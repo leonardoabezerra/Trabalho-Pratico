@@ -2,10 +2,10 @@ package codigo.modelos;
 
   // Classe de Itens que somam ao preço total da ordem de serviço
 
-public abstract class Item {
+ abstract class Item {
       // Declaração dos atributos
-    public String descricao, codigo;
-    public float preco;
+     String descricao, codigo;
+     float preco;
 
       // Construtor
     public Item(String descricao, String codigo, float preco) {
