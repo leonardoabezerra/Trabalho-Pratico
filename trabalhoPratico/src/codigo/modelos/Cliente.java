@@ -1,57 +1,37 @@
 package codigo.modelos;
 
-import javax.swing.JOptionPane;
-
-public class Cliente {
+public class Veiculo {
       // Declaração de atributos
-    private String nome, contato, cpf;
+    private String marca, cor, modelo;
+    private int anoModelo, anoFabricacao, combustivel;
+    private float quilometragem;
 
-      // Construtor
-    public Cliente(String nome, String contato, String cpf) {
-        this.nome = nome;
-        this.contato = contato;  // email/telefone
-        this.cpf = cpf;
-    }
-
-      // Relatorio para mostrar dados do cliente ao usuário
+      // Relatorio para mostrar informações do veículo para o usuário
     public String relatorio() {
         String resposta = "";
-        resposta += "**** DADOS DO CLIENTE ****\n"; 
-        resposta += "NOME: " + nome + "\n";
-        resposta += "CONTATO: " + contato + "\n";
-        resposta += "CPF: " + cpf + "\n";
+        resposta += "**** DADOS DO VEÍCULO ****\n";
+        resposta += "MARCA: " + marca + "\n";
+        resposta += "COR: " + cor + "\n";
+        resposta += "MODELO: " + modelo + "\n";
+        resposta += "ANO DO MODELO: " + anoModelo + "\n";
+        resposta += "ANO DE FABRICAÇÃO: " + anoFabricacao + "\n";
+        resposta += "NÍVEL DE COMBUSTÍVEL: " + combustivel + "%\n";
+        resposta += "QUILOMETRAGEM ATUAL: " + quilometragem + "\n";
 
         return resposta;
     }
 
-      // Método para realizar cadastro do veículo do cliente
-    static Veiculo[] veiculo = new Veiculo[0];
-
-    public static void cadastrarVeiculo() {
-          // Obter dados do veículo
-        String marca = JOptionPane.showInputDialog("Informe a marca do veículo: ");
-        String cor = JOptionPane.showInputDialog("Informe a cor do veículo: ");
-        String modelo = JOptionPane.showInputDialog("Informe o modelo do veículo: ");
-        int anoModelo = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano do modelo: ")); // String --> int
-        int anoFabricacao = Integer.parseInt(JOptionPane.showInputDialog("Informe o ano de fabricação do veículo: "));
-        int combustivel = Integer.parseInt(JOptionPane.showInputDialog("Informe o nível de combustível do veículo, em porcentagem (inclua somente o número): "));
-        float quilometragem = Float.parseFloat(JOptionPane.showInputDialog("Informe o valor da quilometragem atual: ")); // String --> float
-
-        Veiculo tempVeiculo = new Veiculo(marca, cor, modelo, anoModelo, anoFabricacao, combustivel, quilometragem);  // Referencia temporaria para segurar os dados do veiculo
-
-          // Adicionar novo veiculo no array de veiculos
-        Veiculo tempV[] = new Veiculo[veiculo.length+1];
-        for (int i = 0; i < veiculo.length; i++) {
-        tempV[i] = veiculo[i];
-        }
-
-        tempV[veiculo.length] = tempVeiculo;
-        veiculo = tempV;
-
+      // Construtor
+    public Veiculo(String marca, String cor, String modelo, int anoModelo, int anoFabricacao, int combustivel, float quilometragem) {
+        this.marca = marca;
+        this.cor = cor;
+        this.modelo = modelo;
+        this.anoModelo = anoModelo;
+        this.anoFabricacao = anoFabricacao;
+        this.combustivel = combustivel;
+        this.quilometragem = quilometragem;
     }
 
-    public static String getVeiculo(int i) {
-        return veiculo[i].relatorio();
-    }
-
+      
+    
 }
